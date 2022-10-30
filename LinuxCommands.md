@@ -1,5 +1,5 @@
-# Add new user
-adduser <name>
+# Linux Commnands
 
-# Grant sudo permissions
-usermod -aG sudo <name>
+### Add user and grant sudo permissions
+adduser userName</br>
+usermod -aG sudo userName
