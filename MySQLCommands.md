@@ -35,15 +35,15 @@ mysql> CREATE USER 'repl'@'%.example.com' IDENTIFIED BY 'password';</br>
 mysql> GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%.example.com';</br>
 
 ### Make Backup
-xtrabackup --backup --target-dir=/path/to/mysql/backupdir --user=user --password=password
-xtrabackup --prepare --target-dir=/path/to/mysql/backupdir --user=user --password=password
+xtrabackup --backup --target-dir=/path/to/mysql/backupdir --user=user --password=password</br>
+xtrabackup --prepare --target-dir=/path/to/mysql/backupdir --user=user --password=password</br>
 
 ### Transfer Backup
 rsync -avpPzO --no-owner --no-group --no-perms  -e ssh /path/to/mysql-backup/ user@host:/path/to/mysql-backup</br>
 
 ### Restore Backup
-xtrabackup --move-back --target-dir=/path/to/mysql/backupdir
-chown -R mysql:mysql /path/to/mysql/datadir/*
+xtrabackup --move-back --target-dir=/path/to/mysql/backupdir</br>
+chown -R mysql:mysql /path/to/mysql/datadir/*</br>
 
 ## Installing Percona Tools
 ### XtraBackup
