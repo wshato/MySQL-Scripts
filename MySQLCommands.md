@@ -19,6 +19,7 @@ sudo ufw allow from remote_IP_address to any port 3306
 ## User Management
 CREATE USER 'user'@'host' IDENTIFIED BY 'password';</br>
 GRANT PRIVILEGE ON database.table TO 'username'@'host';<br>
+DROP USER 'user'@'host';</br>
 
 ## Replication
 ### On Master
